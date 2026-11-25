@@ -1,0 +1,56 @@
+/* 1. VARIÁVEIS GLOBAIS (Sobrescritas dinamicamente pelo header.php) */
+:root {
+    --primary: #3b82f6;
+    --btn-color: #3b82f6;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-gray: #94a3b8;
+    --text-white: #ffffff;
+}
+
+/* 2. LAYOUT BASE */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+/* 3. ESTRUTURA PRINCIPAL (Sidebar + Conteúdo) */
+.main-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: stretch;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0; /* evita que conteúdo largo estoure o layout flex */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.banner-admin {
+    background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
+    padding: 2.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+/* 4. BOTÕES */
+.btn-personalizado {
+    background-color: var(--btn-color, var(--primary)) !important;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

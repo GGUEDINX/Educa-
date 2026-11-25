@@ -1,0 +1,10 @@
+# Desabilita a listagem de arquivos quando não há index.php numa pasta
+Options -Indexes
+
+# Bloqueia acesso a arquivos ocultos (.env, .git, etc.) e arquivos .sql soltos na raiz
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+<FilesMatch "\.sql$">
+    Require all denied
+</FilesMatch>

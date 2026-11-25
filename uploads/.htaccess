@@ -1,0 +1,4 @@
+# Mesmo validando o tipo de arquivo no upload, esta pasta nunca deve executar scripts.
+<FilesMatch "\.(php|php\d|phtml|php\.)$">
+    Require all denied
+</FilesMatch>
